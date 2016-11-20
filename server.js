@@ -59,7 +59,14 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-      pageTitle : 'Hello Page',
+        pageTitle : 'Hello Page',
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle : 'Projects',
+        welcomeMessage : 'Welcome to my project page'
     });
 });
 
@@ -69,6 +76,8 @@ app.get('/bad', (req, res) => {
         errorMessage: "Unable to find the data"
     })
 });
+
+
 
 // bind the app to a port to listen
 app.listen(PORT, () => {
